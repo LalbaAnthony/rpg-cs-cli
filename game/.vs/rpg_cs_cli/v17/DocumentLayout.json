@@ -1,13 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\projects\\rpg_cs_cli\\",
+  "WorkspaceRootPath": "C:\\projects\\rpg_cs_cli\\game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,25 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "README.md",
-              "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\projects\\rpg_cs_cli\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-06-25T17:03:55.045Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\Program.cs",
+              "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\projects\\rpg_cs_cli\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAwBwAAAA1AAAA",
+              "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAkwCkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-25T16:39:05.897Z",
               "EditorCaption": ""

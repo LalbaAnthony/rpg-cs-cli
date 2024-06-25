@@ -30,26 +30,26 @@ public class Game
 
     protected int life = game_max_life;
 
-    public void printGameName()
-    {
-        Console.WriteLine("\n\n\n");
-        Console.WriteLine(" $$$$$$\\   $$$$$$$\\  $$$$$$$\\ $$$$$$\\   $$$$$$\\   $$$$$$\\  ");
-        Console.WriteLine("$$  __$$\\ $$  _____|$$  _____|\\____$$\\ $$  __$$\\ $$  __$$\\ ");
-        Console.WriteLine("$$$$$$$$ |\\$$$$$$\\  $$ /      $$$$$$$ |$$ /  $$ |$$$$$$$$ |");
-        Console.WriteLine("$$   ____| \\____$$\\ $$ |     $$  __$$ |$$ |  $$ |$$   ____|");
-        Console.WriteLine("\\$$$$$$$\\ $$$$$$$  |\\$$$$$$$\\$$$$$$$ |$$$$$$$  |\\$$$$$$$\\ ");
-        Console.WriteLine(" \\_______|\\_______/  \\_______|\\_______|$$  ____/  \\_______|");
-        Console.WriteLine("                                       $$ |                ");
-        Console.WriteLine("                                       $$ |                ");
-        Console.WriteLine("                                       \\__|                ");
-        Console.WriteLine("\n\n\n");
-    }
+    //public void printGameName()
+    //{
+    //    Console.WriteLine("\n\n\n");
+    //    Console.WriteLine(" $$$$$$\\   $$$$$$$\\  $$$$$$$\\ $$$$$$\\   $$$$$$\\   $$$$$$\\  ");
+    //    Console.WriteLine("$$  __$$\\ $$  _____|$$  _____|\\____$$\\ $$  __$$\\ $$  __$$\\ ");
+    //    Console.WriteLine("$$$$$$$$ |\\$$$$$$\\  $$ /      $$$$$$$ |$$ /  $$ |$$$$$$$$ |");
+    //    Console.WriteLine("$$   ____| \\____$$\\ $$ |     $$  __$$ |$$ |  $$ |$$   ____|");
+    //    Console.WriteLine("\\$$$$$$$\\ $$$$$$$  |\\$$$$$$$\\$$$$$$$ |$$$$$$$  |\\$$$$$$$\\ ");
+    //    Console.WriteLine(" \\_______|\\_______/  \\_______|\\_______|$$  ____/  \\_______|");
+    //    Console.WriteLine("                                       $$ |                ");
+    //    Console.WriteLine("                                       $$ |                ");
+    //    Console.WriteLine("                                       \\__|                ");
+    //    Console.WriteLine("\n\n\n");
+    //}
 
     public static void Main(string[] args)
     {
         Console.WriteLine("Welcome to\n");
-        printGameName();
-        Console.WriteLine("You have " + this.life + " lives.");
+        //printGameName();
+        //Console.WriteLine("You have " + this.life + " lives.");
     }
 }
 
