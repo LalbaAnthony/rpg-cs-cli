@@ -1,0 +1,3 @@
+Misc:
+    - [ ] Affichae d'inventaire
+    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spwanbale dans chaque pieces
