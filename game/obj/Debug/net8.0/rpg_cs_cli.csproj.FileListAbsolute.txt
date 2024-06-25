@@ -1,0 +1,15 @@
+C:\projects\rpg_cs_cli\bin\Debug\net8.0\rpg_cs_cli.exe
+C:\projects\rpg_cs_cli\bin\Debug\net8.0\rpg_cs_cli.deps.json
+C:\projects\rpg_cs_cli\bin\Debug\net8.0\rpg_cs_cli.runtimeconfig.json
+C:\projects\rpg_cs_cli\bin\Debug\net8.0\rpg_cs_cli.dll
+C:\projects\rpg_cs_cli\bin\Debug\net8.0\rpg_cs_cli.pdb
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.AssemblyInfoInputs.cache
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.AssemblyInfo.cs
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.csproj.CoreCompileInputs.cache
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.sourcelink.json
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.dll
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\refint\rpg_cs_cli.dll
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.pdb
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\rpg_cs_cli.genruntimeconfig.cache
+C:\projects\rpg_cs_cli\obj\Debug\net8.0\ref\rpg_cs_cli.dll
