@@ -53,8 +53,8 @@ public static class Helpers
     public static void printLife(int life, int max_life)
     {
 
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.Write("[");
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.Write("Life: [");
         Console.ResetColor();
 
         for (int i = 0; i < max_life; i++)
@@ -73,7 +73,7 @@ public static class Helpers
             }
         }
 
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.White;
         Console.Write("]");
         Console.ResetColor();
         Console.WriteLine();

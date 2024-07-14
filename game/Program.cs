@@ -19,7 +19,6 @@ public class Game
 
     static void displayHelp()
     {
-        Helpers.printLine();
         Helpers.printTitle("Help");
         Console.WriteLine("1. You have to find the key to open the door and escape the room.");
         Console.WriteLine("2. You can move to the next room by typing the direction: [left], [right], [front], [behind]).");
@@ -41,7 +40,6 @@ public class Game
 
     void displayGameOver()
     {
-        Helpers.printLine();
         Helpers.printTitle("Game Over!");
         Console.WriteLine("You have lost all your life.");
         Console.WriteLine("Thanks for playing!");
@@ -122,7 +120,6 @@ public class Game
 
     void displayInventory()
     {
-        Helpers.printLine();
         Helpers.printTitle("Inventory");
         if (inventory.Count == 0)
         {
@@ -140,7 +137,6 @@ public class Game
 
     void displayScore()
     {
-        Helpers.printLine();
         Helpers.printTitle("Score");
         Console.WriteLine($"Your score is: {player_score}");
         Helpers.printLine();
@@ -148,7 +144,6 @@ public class Game
 
     void displayLife()
     {
-        Helpers.printLine();
         Helpers.printTitle("Life");
         Helpers.printLife(player_life, game_max_life);
         Helpers.printLine();
