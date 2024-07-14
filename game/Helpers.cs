@@ -4,7 +4,7 @@ using System.Drawing;
 public static class Helpers
 {
 
-    public static void printGameName()
+    public static void PrintGameName()
     {
         Console.WriteLine("\n\n");
         Console.WriteLine(" $$$$$$\\   $$$$$$$\\  $$$$$$$\\ $$$$$$\\   $$$$$$\\   $$$$$$\\  ");
@@ -18,21 +18,21 @@ public static class Helpers
         Console.WriteLine("                                       \\__|                ");
         Console.WriteLine("\n\n");
     }
-    public static void printLine()
+    public static void PrintLine()
     {
         Console.ForegroundColor = ConsoleColor.Blue;
         Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         Console.ResetColor();
     }
 
-    public static void printChevron()
+    public static void PrintChevron()
     {
-        Console.ForegroundColor = ConsoleColor.Red;
+        Console.ForegroundColor = ConsoleColor.DarkMagenta;
         Console.Write("\n> ");
         Console.ResetColor();
     }
 
-    public static void printTitle(string title)
+    public static void PrintTitle(string title)
     {
         Console.WriteLine();
 
@@ -50,7 +50,7 @@ public static class Helpers
         Console.WriteLine();
     }
 
-    public static void printLife(int life, int max_life)
+    public static void PrintLife(int life, int max_life)
     {
 
         Console.ForegroundColor = ConsoleColor.White;
