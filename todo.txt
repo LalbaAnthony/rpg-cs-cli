@@ -1,4 +1,4 @@
 Misc:
     - [ ] Affichage d'inventaire
     - [ ] Fonction de souvegarde dans un json
-    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spwanbale dans chaque piecesunr th ea
+    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spwanbale dans chaque pieces

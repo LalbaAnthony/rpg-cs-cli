@@ -21,7 +21,7 @@ public class Game
     {
         Helpers.PrintTitle("Help");
         Console.WriteLine("1. You have to find the key to open the door and escape the room.");
-        Console.WriteLine("2. You can move to the next room by typing the direction: [left], [right], [front], [behind]).");
+        Console.WriteLine("2. You can move to the next room by typing the direction: [left], [right], [front], [behind], [top], [bottom]).");
         Console.WriteLine("3. You can type [talk] to interact with NPCs in the current room.");
         Console.WriteLine("4. You can type [search] to search for items in the current room.");
         Console.WriteLine("5. You can type [inventory] to see your inventory.");

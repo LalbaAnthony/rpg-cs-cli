@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("rpg_cs_cli")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8538e002b387e8625869aff2a024537508d53b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+744be1240243148d1327dce55e9afa6c9a5b1faf")]
 [assembly: System.Reflection.AssemblyProductAttribute("rpg_cs_cli")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rpg_cs_cli")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
