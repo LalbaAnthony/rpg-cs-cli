@@ -1,4 +1,6 @@
 Misc:
-    - [ ] Affichage d'inventaire
+    - [X] Recherche item
+    - [X] Affichage d'inventaire
+    - [ ] Incrment score
     - [ ] Fonction de souvegarde dans un json
-    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spwanbale dans chaque pieces
+    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spawnbals dans chaque pieces

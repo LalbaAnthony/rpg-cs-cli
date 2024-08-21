@@ -63,7 +63,7 @@ public class Game
                 IncrementScore();
                 break;
             case "search":
-                Map.CurrentRoom.Search();
+                inventory.Add(Map.CurrentRoom.Search());
                 break;
             case "talk":
             //Map.CurrentRoom.InteractWithNPC();
