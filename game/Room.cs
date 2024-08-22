@@ -5,12 +5,15 @@
     public string Found { get; set; }
 
     public Dictionary<string, Room> AdjacentRooms { get; set; }
+    public List<NPC> NPCs { get; set; }
 
-    public Room(string name, string item, Dictionary<string, Room> adjacentRooms)
+
+    public Room(string name, string item, Dictionary<string, Room> adjacentRooms, List<NPC> npcs)
     {
         Name = name;
         Item = item;
         AdjacentRooms = adjacentRooms;
+        NPCs = npcs;
     }
 
     public string Search()

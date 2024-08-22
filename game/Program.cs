@@ -12,7 +12,7 @@ public class Game
     private List<string> inventory = new List<string>();
     private bool hasKey = false;
 
-    public void IncrementScore(int value = 1)
+    public void IncrementScore(int value = 10)
     {
         player_score += value;
     }
@@ -21,16 +21,51 @@ public class Game
     {
         Helpers.PrintTitle("Help");
         Console.WriteLine("1. You have to find the key to open the door and escape the room.");
-        Console.WriteLine("2. You can move to the next room by typing the direction: [left], [right], [front], [behind], [top], [bottom]).");
-        Console.WriteLine("3. You can type [talk] to interact with NPCs in the current room.");
-        Console.WriteLine("4. You can type [search] to search for items in the current room.");
-        Console.WriteLine("5. You can type [inventory] to see your inventory.");
-        Console.WriteLine("6. You can type [score] to see your score.");
-        Console.WriteLine("7. You can type [life] to see your life.");
-        Console.WriteLine("7. You can type [infos] to see all infos above as: inventory, score, life.");
-        Console.WriteLine("9. You can type [over] to quit the game.");
-        Console.WriteLine("10. You can type [help] to see this message again.");
-        Helpers.PrintLine();
+        Console.Write("2. You can move to the next room by typing the direction: ");
+        Helpers.PrintCommande("left");
+        Console.Write(", ");
+        Helpers.PrintCommande("right");
+        Console.Write(", ");
+        Helpers.PrintCommande("front");
+        Console.Write(", ");
+        Helpers.PrintCommande("behind");
+        Console.Write(", ");
+        Helpers.PrintCommande("top"); ;
+        Console.Write(", ");
+        Helpers.PrintCommande("bottom");
+        Console.WriteLine();
+        Console.Write("3. You can type ");
+        Helpers.PrintCommande("talk");
+        Console.Write(" to interact with NPCs in the current room.");
+        Console.WriteLine();
+        Console.Write("4. You can type ");
+        Helpers.PrintCommande("search");
+        Console.Write(" to search for items in the current room.");
+        Console.WriteLine();
+        Console.Write("5. You can type ");
+        Helpers.PrintCommande("inventory");
+        Console.Write(" to see your inventory.");
+        Console.WriteLine();
+        Console.Write("6. You can type ");
+        Helpers.PrintCommande("score");
+        Console.Write(" to see your score.");
+        Console.WriteLine();
+        Console.Write("7. You can type ");
+        Helpers.PrintCommande("life");
+        Console.Write(" to see your life.");
+        Console.WriteLine();
+        Console.Write("8. You can type ");
+        Helpers.PrintCommande("infos");
+        Console.Write(" to see all infos above as: inventory, score, life.");
+        Console.WriteLine();
+        Console.Write("9. You can type ");
+        Helpers.PrintCommande("over");
+        Console.Write(" to quit the game.");
+        Console.WriteLine();
+        Console.Write("10. You can type ");
+        Helpers.PrintCommande("help");
+        Console.Write(" to see this message again.");
+        Console.WriteLine();
     }
 
     void Start()
@@ -66,7 +101,8 @@ public class Game
                 inventory.Add(Map.CurrentRoom.Search());
                 break;
             case "talk":
-            //Map.CurrentRoom.InteractWithNPC();
+                Talk();
+                break;
             case "inventory":
                 DisplayInventory();
                 break;
@@ -151,21 +187,45 @@ public class Game
         Helpers.PrintLine();
     }
 
+    void DisplayWhereCanIGo()
+    {
+        Helpers.PrintTitle("Where can I go?");
+        WhereCanIGo();
+        Helpers.PrintLine();
+    }
+
     void DisplayInfos()
     {
         DisplayWhereAmI();
+        DisplayWhereCanIGo();
         DisplayInventory();
         DisplayScore();
         DisplayLife();
     }
 
+    public static void Talk()
+    {
+        if (Map.CurrentRoom.NPCs.Count > 0)
+        {
+            foreach (var npc in Map.CurrentRoom.NPCs)
+            {
+                Helpers.PrintDialogue(npc.Name, npc.GetRandomDialogue());
+            }
+        }
+    }
+    
     public static void Move(string direction)
     {
         if (Map.CurrentRoom.AdjacentRooms.ContainsKey(direction))
         {
             Map.CurrentRoom = Map.CurrentRoom.AdjacentRooms[direction];
             Console.WriteLine();
-            Console.WriteLine($"You moved to {Map.CurrentRoom.Name}");
+            Console.WriteLine($"You moved to {Map.CurrentRoom.Name}.");
+            foreach (var npc in Map.CurrentRoom.NPCs)
+            {
+                Console.WriteLine($"You see {npc.Name}.");
+            }
+            Talk();
             Console.WriteLine();
             WhereCanIGo();
         }
@@ -177,18 +237,25 @@ public class Game
 
     public static void WhereCanIGo()
     {
-        Console.WriteLine("You can go: ");
+        Console.Write("You can go: ");
+
+        int count = 0;
+        int totalDirections = Map.CurrentRoom.AdjacentRooms.Keys.Count;
+
         foreach (var direction in Map.CurrentRoom.AdjacentRooms.Keys)
         {
-            Console.Write("[");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(direction);
-            Console.ResetColor();
-            Console.Write("]");
-            Console.Write("  ");
+            Helpers.PrintCommande(direction);
+            count++;
+
+            // Add a comma only if this is not the last element
+            if (count < totalDirections)
+            {
+                Console.Write(", ");
+            }
         }
         Console.WriteLine();
     }
+
 
     public static void Main(string[] args)
     {

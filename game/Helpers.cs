@@ -20,9 +20,36 @@ public static class Helpers
     }
     public static void PrintLine()
     {
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
         Console.ResetColor();
+    }
+
+    public static void PrintCommande(string commande)
+    {
+        Console.Write("[");
+        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        Console.Write(commande);
+        Console.ResetColor();
+        Console.Write("]");
+    }
+
+    public static void PrintDialogue(string name, string dialogue)
+    {
+        PrintChevron();
+
+        Console.Write("@");
+        Console.ResetColor();
+
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+        Console.Write(name);
+        Console.ResetColor();
+
+        Console.Write(": ");
+        Console.ResetColor();
+
+        Console.Write(dialogue);
+        Console.WriteLine();
     }
 
     public static void PrintChevron()
@@ -36,13 +63,13 @@ public static class Helpers
     {
         Console.WriteLine();
 
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write("| ");
         Console.ResetColor();
 
         Console.Write(title);
 
-        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.ForegroundColor = ConsoleColor.Yellow;
         Console.Write(" |");
         Console.ResetColor();
 
@@ -53,7 +80,6 @@ public static class Helpers
     public static void PrintLife(int life, int max_life)
     {
 
-        Console.ForegroundColor = ConsoleColor.White;
         Console.Write("Life: [");
         Console.ResetColor();
 
@@ -73,7 +99,6 @@ public static class Helpers
             }
         }
 
-        Console.ForegroundColor = ConsoleColor.White;
         Console.Write("]");
         Console.ResetColor();
         Console.WriteLine();

@@ -1,6 +1,6 @@
 Misc:
     - [X] Recherche item
     - [X] Affichage d'inventaire
-    - [ ] Incrment score
+    - [ ] Mouvement de PNJ dans chaque piece
+    - [X] Increment score
     - [ ] Fonction de souvegarde dans un json
-    - [ ] Carte: matrice en deux dimensions avec la liste des mobs spawnbals dans chaque pieces
