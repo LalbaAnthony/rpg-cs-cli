@@ -91,10 +91,11 @@ public class Map
         grandma.AddDialogue("Have you seen my glasses?", 0.3);
         grandma.AddDialogue("It's a bit chilly today, isn't it?", 0.1);
 
+
         // Add NPCs to rooms
         grandmasRoom.NPCs.Add(grandma);
 
         // Set the starting room
-        CurrentRoom = grandmasRoom;
+        CurrentRoom = cathysRoom;
     }
 }
