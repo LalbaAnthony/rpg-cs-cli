@@ -1,6 +1,14 @@
 Misc:
     - [X] Recherche item
     - [X] Affichage d'inventaire
-    - [ ] Mouvement de PNJ dans chaque piece
     - [X] Increment score
+
+    - [ ] Faire des classes pour les items
+    - [ ] Ajouter des items
+    - [ ] Clé pour sortir de la maison
+
+    - [ ] Faire des interraction items/NPC (ramener les luenttes de grand mère)
+    - [ ] Remplacer barre de vie par de la fatigue
+    - [ ] Mouvement de PNJ dans chaque piece
+    - [ ] Ajout des NPCs
     - [ ] Fonction de souvegarde dans un json

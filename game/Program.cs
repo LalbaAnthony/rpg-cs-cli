@@ -9,8 +9,7 @@ public class Game
     // Player
     private int player_life { get; set; } = 2;
     private int player_score { get; set; } = 0;
-    private List<string> inventory = new List<string>();
-    private bool hasKey = false;
+    private List<Item> inventory = new List<Item>();
 
     public void IncrementScore(int value = 10)
     {
@@ -20,7 +19,7 @@ public class Game
     static void DisplayHelp()
     {
         Helpers.PrintTitle("Help");
-        Console.WriteLine("1. You have to find the key to open the door and escape the room.");
+        Console.WriteLine("1. You have to find the key to open the door and escape the mansion.");
         Console.Write("2. You can move to the next room by typing the direction: ");
         Helpers.PrintCommande("left");
         Console.Write(", ");
@@ -101,7 +100,7 @@ public class Game
                 inventory.Add(Map.CurrentRoom.Search());
                 break;
             case "talk":
-                Talk();
+                Talk(true);
                 break;
             case "inventory":
                 DisplayInventory();
@@ -155,7 +154,7 @@ public class Game
         {
             foreach (var item in inventory)
             {
-                Console.WriteLine($"- {item}");
+                Console.WriteLine($"- {item.Name}");
             }
         }
         Helpers.PrintLine();
@@ -203,13 +202,18 @@ public class Game
         DisplayLife();
     }
 
-    public static void Talk()
+    public static void Talk(bool askedByPlayer = false)
     {
         if (Map.CurrentRoom.NPCs.Count > 0)
         {
             foreach (var npc in Map.CurrentRoom.NPCs)
             {
                 Helpers.PrintDialogue(npc.Name, npc.GetRandomDialogue());
+            }
+        } else {
+            if (askedByPlayer)
+            {
+                Console.WriteLine("Seems like you're talking to yourself...");
             }
         }
     }

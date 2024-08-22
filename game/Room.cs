@@ -1,14 +1,12 @@
 ﻿public class Room
 {
     public string Name { get; set; }
-    public string Item { get; set; }
-    public string Found { get; set; }
+    public Item Item { get; set; }
 
     public Dictionary<string, Room> AdjacentRooms { get; set; }
     public List<NPC> NPCs { get; set; }
 
-
-    public Room(string name, string item, Dictionary<string, Room> adjacentRooms, List<NPC> npcs)
+    public Room(string name, Item item, Dictionary<string, Room> adjacentRooms, List<NPC> npcs)
     {
         Name = name;
         Item = item;
@@ -16,21 +14,18 @@
         NPCs = npcs;
     }
 
-    public string Search()
+    public Item Search()
     {
-        if (!string.IsNullOrEmpty(Item))
+        if (!Item.Found)
         {
-            Console.WriteLine($"You found a {Item}!");
+            Console.WriteLine($"You found a {Item.Name}!");
 
-            Found = Item;
-            Item = null; // Item is taken
-            return Found;
+            return Item; // Item is taken
         }
         else
         {
             Console.WriteLine("There's nothing here.");
             return null;
         }
-
     }
 }
