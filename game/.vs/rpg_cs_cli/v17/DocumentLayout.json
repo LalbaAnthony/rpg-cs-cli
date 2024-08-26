@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\projects\\rpg_cs_cli\\game\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +17,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,82 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Item.cs",
               "RelativeDocumentMoniker": "Item.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Item.cs",
               "RelativeToolTip": "Item.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T09:49:56.071Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAcwGMAAAA0AAAA",
+              "ViewState": "AQIAAOkAAAAAAAAAAAAqwAIBAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T09:33:58.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Map.cs",
               "RelativeDocumentMoniker": "Map.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Map.cs",
               "RelativeToolTip": "Map.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAAAHAAAAAlAAAA",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAIwHAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T07:09:17.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Room.cs",
               "RelativeDocumentMoniker": "Room.cs",
-              "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Room.cs*",
-              "RelativeToolTip": "Room.cs*",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAUwBYAAAATAAAA",
+              "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Room.cs",
+              "RelativeToolTip": "Room.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAADwv2IAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T08:17:48.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "NPC.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\NPC.cs",
               "RelativeDocumentMoniker": "NPC.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\NPC.cs",
               "RelativeToolTip": "NPC.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAcAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAkwAMAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T11:12:48.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Helpers.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Helpers.cs",
               "RelativeDocumentMoniker": "Helpers.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Helpers.cs",
               "RelativeToolTip": "Helpers.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAADwv0cAAAA1AAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwFIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-13T08:20:39.39Z",
               "EditorCaption": ""

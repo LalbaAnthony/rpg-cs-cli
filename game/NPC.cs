@@ -1,15 +1,46 @@
 ﻿public class NPC
 {
-    public string Name { get; private set; }
-    private List<(string Dialogue, double Probability)> Dialogues { get; set; }
+    private int ID;
+    private string Name;
+    private List<(string Dialogue, double Probability)> Dialogues;
     private Random random;
 
-    public NPC(string name)
+    public NPC(int id, string name)
     {
+        ID = id;
         Name = name;
         Dialogues = new List<(string Dialogue, double Probability)>();
         random = new Random();
     }
+
+    // ====== GETTERS & SETTERS ======
+
+    public int getID()
+    {
+        return ID;
+    }
+
+    public string getName()
+    {
+        return Name;
+    }
+
+    public void setName(string name)
+    {
+        Name = name;
+    }
+
+    public List<(string Dialogue, double Probability)> getDialogues()
+    {
+        return Dialogues;
+    }
+
+    public void setDialogues(List<(string Dialogue, double Probability)> dialogues)
+    {
+        Dialogues = dialogues;
+    }
+
+    // ====== METHODS ======
 
     // Add a dialogue with a specific probability
     public void AddDialogue(string dialogue, double probability)

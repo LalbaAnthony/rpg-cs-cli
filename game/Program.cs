@@ -7,8 +7,8 @@ public class Game
     static public int game_max_life = 3;
 
     // Player
-    private int player_life { get; set; } = 2;
-    private int player_score { get; set; } = 0;
+    private int player_life = 2;
+    private int player_score = 0;
     private List<Item> inventory = new List<Item>();
 
     public void IncrementScore(int value = 10)
@@ -29,7 +29,7 @@ public class Game
         Console.Write(", ");
         Helpers.PrintCommande("behind");
         Console.Write(", ");
-        Helpers.PrintCommande("top"); ;
+        Helpers.PrintCommande("top");
         Console.Write(", ");
         Helpers.PrintCommande("bottom");
         Console.WriteLine();
@@ -83,6 +83,14 @@ public class Game
         Helpers.PrintLine();
     }
 
+    void DisplayGameWon()
+    {
+        Helpers.PrintTitle("Congratulations!");
+        Console.WriteLine("You have found a way to escape the mansion!");
+        Console.WriteLine("Thanks for playing!");
+        Helpers.PrintLine();
+    }
+
     void HandleCommande(string command)
     {
         switch (command)
@@ -98,6 +106,7 @@ public class Game
                 break;
             case "search":
                 inventory.Add(Map.CurrentRoom.Search());
+                Map.CurrentRoom.ClearItem();
                 break;
             case "talk":
                 Talk(true);
@@ -154,7 +163,7 @@ public class Game
         {
             foreach (var item in inventory)
             {
-                Console.WriteLine($"- {item.Name}");
+                Console.WriteLine(value: $"- {item.getName()}");
             }
         }
         Helpers.PrintLine();
@@ -176,7 +185,7 @@ public class Game
 
     void PrintWhereAmI()
     {
-        Console.WriteLine($"You are in {Map.CurrentRoom.Name}");
+        Console.WriteLine($"You are in {Map.CurrentRoom.getName()}.");
     }
 
     void DisplayWhereAmI()
@@ -204,30 +213,32 @@ public class Game
 
     public static void Talk(bool askedByPlayer = false)
     {
-        if (Map.CurrentRoom.NPCs.Count > 0)
+        if (Map.CurrentRoom.HasNPC())
         {
-            foreach (var npc in Map.CurrentRoom.NPCs)
+            foreach (var npc in Map.CurrentRoom.getNPCs())
             {
-                Helpers.PrintDialogue(npc.Name, npc.GetRandomDialogue());
+                Helpers.PrintDialogue(npc.getName(), npc.GetRandomDialogue());
             }
-        } else {
+        }
+        else
+        {
             if (askedByPlayer)
             {
                 Console.WriteLine("Seems like you're talking to yourself...");
             }
         }
     }
-    
+
     public static void Move(string direction)
     {
-        if (Map.CurrentRoom.AdjacentRooms.ContainsKey(direction))
+        if (Map.CurrentRoom.canGo(direction))
         {
-            Map.CurrentRoom = Map.CurrentRoom.AdjacentRooms[direction];
+            Map.CurrentRoom = Map.CurrentRoom.GetAdjacentRoom(direction);
             Console.WriteLine();
-            Console.WriteLine($"You moved to {Map.CurrentRoom.Name}.");
-            foreach (var npc in Map.CurrentRoom.NPCs)
+            Console.WriteLine($"You moved to {Map.CurrentRoom.getName()}.");
+            foreach (var npc in Map.CurrentRoom.getNPCs())
             {
-                Console.WriteLine($"You see {npc.Name}.");
+                Console.WriteLine($"You see {npc.getName()} in the room.");
             }
             Talk();
             Console.WriteLine();
@@ -243,23 +254,20 @@ public class Game
     {
         Console.Write("You can go: ");
 
-        int count = 0;
-        int totalDirections = Map.CurrentRoom.AdjacentRooms.Keys.Count;
+        List<string> possibleDirections = Map.CurrentRoom.GetPossibleDirections();
 
-        foreach (var direction in Map.CurrentRoom.AdjacentRooms.Keys)
+        for (int i = 0; i < possibleDirections.Count; i++)
         {
-            Helpers.PrintCommande(direction);
-            count++;
+            Helpers.PrintCommande(possibleDirections[i]);
 
-            // Add a comma only if this is not the last element
-            if (count < totalDirections)
+            if (i < possibleDirections.Count - 1)
             {
                 Console.Write(", ");
             }
         }
+
         Console.WriteLine();
     }
-
 
     public static void Main(string[] args)
     {

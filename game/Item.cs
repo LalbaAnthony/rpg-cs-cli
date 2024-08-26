@@ -1,11 +1,30 @@
 ﻿public class Item
 {
-    public string Name { get; private set; }
-    public bool Found { get; set; }
+    private int ID;
+    private string Name;
 
-    public Item(string name)
+    public Item(int id, string name)
+    {
+        ID = id;
+        Name = name;
+    }
+
+    // ====== GETTERS & SETTERS ======
+
+    public int getID()
+    {
+        return ID;
+    }
+
+    public string getName()
+    {
+        return Name;
+    }
+
+    public void setName(string name)
     {
         Name = name;
-        Found = false;
     }
+
+    // Note: No setter for ID
 }
