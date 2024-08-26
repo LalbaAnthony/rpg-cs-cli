@@ -3,92 +3,55 @@ using System.Collections.Generic;
 
 public class Game
 {
-    // Game
-    static public int game_max_life = 3;
+    // Game constants
 
-    // Player
-    private int player_life = 2;
+    static public int game_max_energy = 100;
+
+    // PLayer related variables
+
+    private int player_energy = 70;
     private int player_score = 0;
     private List<Item> inventory = new List<Item>();
+
+    // Stats related methods
 
     public void IncrementScore(int value = 10)
     {
         player_score += value;
     }
 
-    static void DisplayHelp()
+    public void SetEnergy(int value)
     {
-        Helpers.PrintTitle("Help");
-        Console.WriteLine("1. You have to find the key to open the door and escape the mansion.");
-        Console.Write("2. You can move to the next room by typing the direction: ");
-        Helpers.PrintCommande("left");
-        Console.Write(", ");
-        Helpers.PrintCommande("right");
-        Console.Write(", ");
-        Helpers.PrintCommande("front");
-        Console.Write(", ");
-        Helpers.PrintCommande("behind");
-        Console.Write(", ");
-        Helpers.PrintCommande("top");
-        Console.Write(", ");
-        Helpers.PrintCommande("bottom");
-        Console.WriteLine();
-        Console.Write("3. You can type ");
-        Helpers.PrintCommande("talk");
-        Console.Write(" to interact with NPCs in the current room.");
-        Console.WriteLine();
-        Console.Write("4. You can type ");
-        Helpers.PrintCommande("search");
-        Console.Write(" to search for items in the current room.");
-        Console.WriteLine();
-        Console.Write("5. You can type ");
-        Helpers.PrintCommande("inventory");
-        Console.Write(" to see your inventory.");
-        Console.WriteLine();
-        Console.Write("6. You can type ");
-        Helpers.PrintCommande("score");
-        Console.Write(" to see your score.");
-        Console.WriteLine();
-        Console.Write("7. You can type ");
-        Helpers.PrintCommande("life");
-        Console.Write(" to see your life.");
-        Console.WriteLine();
-        Console.Write("8. You can type ");
-        Helpers.PrintCommande("infos");
-        Console.Write(" to see all infos above as: inventory, score, life.");
-        Console.WriteLine();
-        Console.Write("9. You can type ");
-        Helpers.PrintCommande("over");
-        Console.Write(" to quit the game.");
-        Console.WriteLine();
-        Console.Write("10. You can type ");
-        Helpers.PrintCommande("help");
-        Console.Write(" to see this message again.");
-        Console.WriteLine();
+        if (player_energy < 0)
+        {
+            player_energy = 0;
+        }
+        else if (player_energy > game_max_energy)
+        {
+            player_energy = game_max_energy;
+        }
+        else
+        {
+            player_energy = value;
+        }
     }
 
-    void Start()
+    public void IncrementEnergy(int value = 10)
     {
-        Helpers.PrintGameName();
+        SetEnergy(player_energy + value);
+    }
+
+    public void DecrementEnergy(int value = 1)
+    {
+        SetEnergy(player_energy - value);
+    }
+
+    public void Start()
+    {
+        Printers.PrintGameName();
         DisplayHelp();
         Map.Initialize();
         GameLoop();
-    }
-
-    void DisplayGameOver()
-    {
-        Helpers.PrintTitle("Game Over!");
-        Console.WriteLine("You have lost all your life.");
-        Console.WriteLine("Thanks for playing!");
-        Helpers.PrintLine();
-    }
-
-    void DisplayGameWon()
-    {
-        Helpers.PrintTitle("Congratulations!");
-        Console.WriteLine("You have found a way to escape the mansion!");
-        Console.WriteLine("Thanks for playing!");
-        Helpers.PrintLine();
     }
 
     void HandleCommande(string command)
@@ -117,8 +80,8 @@ public class Game
             case "score":
                 DisplayScore();
                 break;
-            case "life":
-                DisplayLife();
+            case "energy":
+                DisplayEnergy();
                 break;
             case "infos":
                 DisplayInfos();
@@ -130,7 +93,7 @@ public class Game
                 DisplayHelp();
                 break;
             default:
-                Console.WriteLine("Unknown command. Type [help] for the list of commands.");
+                Console.WriteLine(Dialogs.unknown_command);
                 break;
         }
     }
@@ -139,25 +102,97 @@ public class Game
     {
         while (true)
         {
-            if (player_life <= 0)
+            Printers.PrintChevron();
+            string command = Console.ReadLine().Trim().ToLower();
+
+            HandleCommande(command);
+
+            if (player_energy <= 0)
             {
                 DisplayGameOver();
                 return;
             }
 
-            Helpers.PrintChevron();
-            string command = Console.ReadLine().Trim().ToLower();
-
-            HandleCommande(command);
+            if (Map.CurrentRoom.getID() == 7 && inventory.Exists(item => item.getID() == 1)) // If in ground floor corridor and has key
+            {
+                DisplayGameWon();
+                return;
+            }
         }
+    }
+
+    void DisplayGameOver()
+    {
+        Printers.PrintTitle(Dialogs.game_over);
+        Console.WriteLine(Dialogs.thanks_for_playing);
+        Printers.PrintLine();
+    }
+
+    void DisplayGameWon()
+    {
+        Printers.PrintTitle(Dialogs.game_won);
+        Console.WriteLine(Dialogs.thanks_for_playing);
+        Printers.PrintLine();
+    }
+
+    void DisplayHelp()
+    {
+        Printers.PrintTitle("Help");
+        Console.WriteLine("1. You have to find the key to open the door and escape the mansion.");
+        Console.Write("2. You can move to the next room by typing the direction: ");
+        Printers.PrintCommande("left");
+        Console.Write(", ");
+        Printers.PrintCommande("right");
+        Console.Write(", ");
+        Printers.PrintCommande("front");
+        Console.Write(", ");
+        Printers.PrintCommande("behind");
+        Console.Write(", ");
+        Printers.PrintCommande("top");
+        Console.Write(", ");
+        Printers.PrintCommande("bottom");
+        Console.WriteLine();
+        Console.Write("3. You can type ");
+        Printers.PrintCommande("talk");
+        Console.Write(" to interact with NPCs in the current room.");
+        Console.WriteLine();
+        Console.Write("4. You can type ");
+        Printers.PrintCommande("search");
+        Console.Write(" to search for items in the current room.");
+        Console.WriteLine();
+        Console.Write("5. You can type ");
+        Printers.PrintCommande("inventory");
+        Console.Write(" to see your inventory.");
+        Console.WriteLine();
+        Console.Write("6. You can type ");
+        Printers.PrintCommande("score");
+        Console.Write(" to see your score.");
+        Console.WriteLine();
+        Console.Write("7. You can type ");
+        Printers.PrintCommande("energy");
+        Console.Write(" to see your energy.");
+        Console.WriteLine();
+        Console.Write("8. You can type ");
+        Printers.PrintCommande("infos");
+        Console.Write(" to see all infos above as: inventory, score, energy.");
+        Console.WriteLine();
+        Console.Write("9. You can type ");
+        Printers.PrintCommande("over");
+        Console.Write(" to quit the game.");
+        Console.WriteLine();
+        Console.Write("10. You can type ");
+        Printers.PrintCommande("help");
+        Console.Write(" to see this message again.");
+        Console.WriteLine();
+        Printers.PrintLine();
     }
 
     void DisplayInventory()
     {
-        Helpers.PrintTitle("Inventory");
+        Printers.PrintTitle("Inventory");
         if (inventory.Count == 0)
         {
-            Console.WriteLine("Your inventory is empty.");
+            Console.WriteLine(Dialogs.GetRandomDialogueEmptyInventory());
         }
         else
         {
@@ -166,21 +201,23 @@ public class Game
                 Console.WriteLine(value: $"- {item.getName()}");
             }
         }
-        Helpers.PrintLine();
+        Printers.PrintLine();
     }
 
     void DisplayScore()
     {
-        Helpers.PrintTitle("Score");
+        Printers.PrintTitle("Score");
         Console.WriteLine($"Your score is: {player_score}");
-        Helpers.PrintLine();
+        Printers.PrintLine();
     }
 
-    void DisplayLife()
+    void DisplayEnergy()
     {
-        Helpers.PrintTitle("Life");
-        Helpers.PrintLife(player_life, game_max_life);
-        Helpers.PrintLine();
+        Printers.PrintTitle("Energy");
+
+        int perten_player_energy = Helpers.ConvertToPercentage(player_energy, game_max_energy) / 10;
+        Printers.PrintEnergy(perten_player_energy, 10);
+        Printers.PrintLine();
     }
 
     void PrintWhereAmI()
@@ -190,16 +227,16 @@ public class Game
 
     void DisplayWhereAmI()
     {
-        Helpers.PrintTitle("Where am I?");
+        Printers.PrintTitle("Where am I?");
         PrintWhereAmI();
-        Helpers.PrintLine();
+        Printers.PrintLine();
     }
 
     void DisplayWhereCanIGo()
     {
-        Helpers.PrintTitle("Where can I go?");
+        Printers.PrintTitle("Where can I go?");
         WhereCanIGo();
-        Helpers.PrintLine();
+        Printers.PrintLine();
     }
 
     void DisplayInfos()
@@ -208,34 +245,37 @@ public class Game
         DisplayWhereCanIGo();
         DisplayInventory();
         DisplayScore();
-        DisplayLife();
+        DisplayEnergy();
     }
 
-    public static void Talk(bool askedByPlayer = false)
+    static void Talk(bool askedByPlayer = false)
     {
         if (Map.CurrentRoom.HasNPC())
         {
             foreach (var npc in Map.CurrentRoom.getNPCs())
             {
-                Helpers.PrintDialogue(npc.getName(), npc.GetRandomDialogue());
+                Printers.PrintDialogue(npc.getName(), npc.GetRandomDialogue());
             }
         }
         else
         {
             if (askedByPlayer)
             {
-                Console.WriteLine("Seems like you're talking to yourself...");
+                Console.WriteLine(Dialogs.GetRandomDialogueNoNPC());
             }
         }
     }
 
-    public static void Move(string direction)
+    void Move(string direction)
     {
         if (Map.CurrentRoom.canGo(direction))
         {
             Map.CurrentRoom = Map.CurrentRoom.GetAdjacentRoom(direction);
             Console.WriteLine();
             Console.WriteLine($"You moved to {Map.CurrentRoom.getName()}.");
+
+            DecrementEnergy(1);
+
             foreach (var npc in Map.CurrentRoom.getNPCs())
             {
                 Console.WriteLine($"You see {npc.getName()} in the room.");
@@ -246,11 +286,11 @@ public class Game
         }
         else
         {
-            Console.WriteLine("You can't go that way.");
+            Console.WriteLine(Dialogs.GetRandomDialogueCantMove());
         }
     }
 
-    public static void WhereCanIGo()
+    void WhereCanIGo()
     {
         Console.Write("You can go: ");
 
@@ -258,7 +298,7 @@ public class Game
 
         for (int i = 0; i < possibleDirections.Count; i++)
         {
-            Helpers.PrintCommande(possibleDirections[i]);
+            Printers.PrintCommande(possibleDirections[i]);
 
             if (i < possibleDirections.Count - 1)
             {

@@ -3,13 +3,12 @@ Misc:
     - [X] Affichage d'inventaire
     - [X] Increment score
     - [X] Faire des classes pour les items
+    - [X] Ajouter des items
+    - [X] Remplacer barre de vie par de la fatigue
+    - [X] Ajout des NPCs
 
-    - [ ] Ajouter des items
-    - [ ] Clé pour sortir de la maison
 
     - [ ] Fain du jeu avec item clé
     - [ ] Faire des interraction items/NPC (ramener les luenttes de grand mère)
-    - [ ] Remplacer barre de vie par de la fatigue
     - [ ] Mouvement de PNJ dans chaque piece
-    - [ ] Ajout des NPCs
-    - [ ] Fonction de souvegarde dans un json
+    - [ ] Fonction de sauvegarde dans un json
