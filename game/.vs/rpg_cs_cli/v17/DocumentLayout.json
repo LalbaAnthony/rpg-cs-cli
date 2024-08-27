@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\projects\\rpg_cs_cli\\game\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\dialogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:dialogs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{156BA5C1-C91F-43E9-B925-2FBB3C35F506}|rpg_cs_cli.csproj|c:\\projects\\rpg_cs_cli\\game\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Dialogs.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Dialogs.cs",
               "RelativeDocumentMoniker": "Dialogs.cs",
@@ -54,12 +54,11 @@
               "RelativeToolTip": "Dialogs.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T18:43:35.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T18:43:35.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Printers.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Printers.cs",
               "RelativeDocumentMoniker": "Printers.cs",
@@ -67,12 +66,11 @@
               "RelativeToolTip": "Printers.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T17:49:31.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T17:49:31.897Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Item.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Item.cs",
               "RelativeDocumentMoniker": "Item.cs",
@@ -80,18 +78,17 @@
               "RelativeToolTip": "Item.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T09:49:56.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-22T09:49:56.071Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\projects\\rpg_cs_cli\\game\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\projects\\rpg_cs_cli\\game\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACgBAAAAAAAAAAAYwDEBAAANAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAwwG0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-21T09:33:58.176Z",
               "EditorCaption": ""
